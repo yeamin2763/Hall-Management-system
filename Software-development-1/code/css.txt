@@ -1,0 +1,2 @@
+
+style="color:black; background-color:white; font-size:18px; width:260px; padding-left:10px;  margin-left:13px; margin-bottom:8px; height:30px;  border: 2px solid black;" type="text"

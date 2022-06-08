@@ -1,0 +1,91 @@
+<?php
+ include 'connection.php';
+ 
+ if(isset($_POST['submit']))
+ {
+   $name= $_POST['user'];
+   $Student_Id= $_POST['id'];
+   $Dept_name=$_POST['dept'];
+   $email= $_POST['email'];
+   $number=$_POST['number'];
+   $father_number=$_POST['numbers'];
+   $address=$_POST['address'];
+
+  $insertquery = " insert into application(name,Student_Id,Dept_name,email,number, father_number,address) 
+     values('$name','$Student_Id',' $Dept_name','$email','$number',' $father_number','$address')" ;
+
+     mysqli_query($con,$insertquery);
+     if($res){ 
+       ?>
+       <script>
+         alert("Data inserted properly");
+       </script>
+       <?php
+     }
+     else
+     { 
+      ?>
+      <script>
+        alert("Data inserted properly");
+      </script>
+      <?php
+
+     }
+  }
+  ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+ include 'connection.php';
+ 
+ if(isset($_POST['submit']))
+ {
+   $Student_Id= $_POST['Student_Id'];
+   $Sroom_no= $_POST['room_no'];
+   $month=$_POST['month'];
+   $Advance_bill= $_POST['Advance_bill'];
+   $due_bill=$_POST['due_bill'];
+   $food_bill=$_POST['food_bill'];
+   $seat_bill=$_POST['seat_bill'];
+   $total_bill=$_POST['total_bill'];
+
+  $insertdata = " insert into stdntinfo(Student_Id,room_no,month,Advance_bill, due_bill,food_bill,seat_bill,total_bill) 
+
+     values('$Student_Id','$room_no',' $month','$Advance_bill','$due_bill',' $food_bill','$seat_bill','$total_bill')" ;
+
+     mysqli_query($con,$insertdata);
+     if($res){ 
+       ?>
+       <script>
+         alert("Data inserted properly");
+       </script>
+       <?php
+     }
+     else
+     { 
+      ?>
+      <script>
+        alert("Data inserted properly");
+      </script>
+      <?php
+
+     }
+  }
+  ?>

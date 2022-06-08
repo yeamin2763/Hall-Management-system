@@ -1,0 +1,39 @@
+ <div class="center-div" >
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>name</th>
+                            <th>Student_Id</th>
+                            <th>Dept_name</th>
+                            <th>email</th>
+                            <th>number</th>
+                            <th>father_number</th>
+                            <th>address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                      <?php
+                      include 'connection.php';
+                      $selectquery="select * from  application ";
+                      $query = mysqli_query($con,$selectquery);
+                      $nums  = mysqli_num_rows($query);
+                      while($res =  mysqli_fetch_array($query))
+                      {
+                        ?>
+                      <tr>
+                            <td> <?php echo $res['name'] ?> </td>
+                            <td> <?php echo $res['Student_Id'] ?> </td>
+                            <td> <?php echo $res['Dept_name'] ?> </td>
+                            <td> <?php echo $res['email'] ?> </td>
+                            <td> <?php echo $res['number'] ?> </td>
+                            <td> <?php echo $res['father_number'] ?> </td>
+                            <td> <?php echo $res['address'] ?> </td>
+                        </tr>
+                   <?php
+                    }
+                      ?>              
+                    </tbody>
+                </table>
+            </div>

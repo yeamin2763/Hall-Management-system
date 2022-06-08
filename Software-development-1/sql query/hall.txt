@@ -1,0 +1,114 @@
+create database project;
+
+CREATE TABLE application2  (
+name VARCHAR(30),
+Student_Id INT(6) AUTO_INCREMENT PRIMARY KEY,
+Dept_name VARCHAR(30) NOT NULL,
+email VARCHAR(30) NOT NULL,
+number INT(6),
+father_number INT(6),
+address  VARCHAR(50),
+password VARCHAR(60)
+);
+
+
+
+CREATE TABLE halldata3(
+Student_Id INT(6) ,
+room_no INT(6),
+month VARCHAR(30),
+Advance_bill INT(6),
+due_bill INT(6),
+food_bill INT(6),
+seat_bill INT(6),
+total_bill INT(6),
+FOREIGN KEY (Student_Id) REFERENCES application (Student_Id)
+
+);
+
+//admin login
+
+CREATE table login(
+    idx int NOT NULL PRIMARY KEY,
+    name varchar(255),
+    email varchar(255),
+    password varchar(255)
+    );
+
+INSERT INTO login(idx, name, email, password)
+VALUES(0, 'admin', 'admin', 'admin');
+
+
+CREATE table contact(
+    name varchar(255),
+    email varchar(255),
+    id int,
+    department varchar(255),
+    message varchar(255)
+    );
+
+
+
+
+
+
+
+//comment //table name 
+name
+Student_Id
+Dept_name
+email
+number
+father_number
+father_number
+
+
+
+
+
+
+
+<?php
+ include 'connection.php';
+ 
+ if(isset($_POST['submit']))
+ {
+  echo "hello world";
+   $n= $_POST['user'];
+   $e= $_POST['email'];
+   $i= $_POST['id'];
+   $D=$_POST['department'];
+   $m= $_POST['message'];
+
+  $insertquery = "INSERT INTO `contact`(`name`, `email`, `id`, `department`, `message`) 
+  VALUES ('$n',' $e','$i','$D','$m')";
+
+   $result=mysqli_query($con,$insertquery);
+     if($result){ 
+       echo "hello world";
+       ?>
+       <script>
+         alert("Data inserted properly");
+       </script>
+       <?php
+     }
+     else
+     { 
+      ?>
+      <script>
+        alert("Data isnot  inserted properly");
+      </script>
+      <?php
+
+     }
+  }
+  ?>
+
+
+
+
+
+
+
+
+

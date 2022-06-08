@@ -1,0 +1,29 @@
+table
+{
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    color: #000207;
+}
+th,td
+{
+    border: 1px solid #000000;
+    padding: 8px 30px;
+    text-align:center;
+    color: #000207;
+}
+th
+{
+    text-transform: uppercase;
+    font-weight: 500;;
+
+}
+td{
+    font-size: 13 px;    
+}
+
+h1
+{
+    text-align: center;
+}

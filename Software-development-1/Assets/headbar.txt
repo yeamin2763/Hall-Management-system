@@ -1,0 +1,48 @@
+
+    <!--header section start-->
+
+    <header id="must-head" class="must-header">
+      <div class="header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="header-top-left-text d-flex pt-3" >
+                <p class="me-3"  >Phone Number : 01705118122</p>
+                <p>Email : newhall@gmail.com</p>  
+              </div> 
+            </div>
+            <div class="col-md-6">
+             <div class="social-content d-flex float-end pt-3">
+               <p class="me-2">Follow us : </p>
+               <div class="social-icon ml-2">
+                 <span class="rounded-circle bg-black p-1">1</span>
+                 <span class="rounded-circle bg-black p-1">1</span>
+                 <span class="rounded-circle bg-black p-1">1</span>
+                 <span class="rounded-circle bg-black p-1">1</span>
+               </div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-boto,"></div>
+    </header>
+
+    <!--header section End-->
+
+
+css 
+
+
+.header-top
+{
+    background-color: rgb(88, 110, 52);
+    color: white;
+}
+
+
+
+
+
+
+
